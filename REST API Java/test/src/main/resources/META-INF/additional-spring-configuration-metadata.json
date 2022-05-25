@@ -1,9 +1,0 @@
-{
-  "properties": [
-    {
-      "name": "server.cors.application_origin",
-      "type": "java.lang.String",
-      "description": "Description for server.cors.application_origin."
-    }
-  ]
-}
