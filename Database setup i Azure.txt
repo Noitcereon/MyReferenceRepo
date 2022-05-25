@@ -1,0 +1,3 @@
+Husk at tillade adgang igennem database firewall!
+(portal.azure) gå ind på selve databasen, Firewall Settings =>
+sæt Allow Azure services and resources to access this server til Yes.

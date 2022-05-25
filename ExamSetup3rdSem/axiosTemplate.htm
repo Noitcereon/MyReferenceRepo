@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AXIOS TEMPLATE</title>
+    <link rel="stylesheet" type="text/css" href="bundle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        background-color: rgb(38, 38, 43)
+    }
+
+    #wrapper {
+        min-height: 300px;
+        background-color: #CCFFFF;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        min-height: 30px;
+        background-color: rgb(139, 172, 233);
+    }
+
+    .scroller {
+        max-height: 700px;
+        overflow: auto;
+    }
+
+    .jumbotron {
+        background-color: #CCFFFF;
+        border-bottom: 1px solid black;
+    }
+</style>
+
+<body>
+    <section class="container" id="wrapper">
+        <header class="jumbotron">
+            <h1>Template for REST Consumption with TypeScript and Vue.</h1>
+        </header>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Methods</h2>
+                    <h3>Get all</h3>
+                    <button class="btn btn-primary" @click="GetAll()" id="getAllBtn">Retrieve all items</button>
+                    <div id="getAllResponse" class="alert alert-info">getAllResponse</div>
+                    <h3>Get By Id</h3>
+                    <div class="form-group">
+                        <label>Input 1</label>
+                        <input class="form-control" type="number" id="getByIdInput">
+                    </div>
+                    <button class="btn btn-primary" @click="GetSpecific()" id="getSpecificBtn">Retrieve specific
+                        item</button>
+                    <div id="getSpecificResponse" class="alert alert-info">getSpecificResponse</div>
+                    <h3>Create</h3>
+                    <div class="form-group">
+                        <label>Input 1</label>
+                        <input class="form-control" type="text" id="createInput1">
+                    </div>
+                    <div class="form-group">
+                        <label>Input 2</label>
+                        <input class="form-control" type="text" id="createInput2">
+                    </div>
+                    <button class="btn btn-primary" @click="CreateObject()" id="createBtn">Create object</button>
+                    <div id="createResponse" class="alert alert-info">createResponse</div>
+                    <h3>Update</h3>
+                    <div class="form-group">
+                        <label>Input 1</label>
+                        <input class="form-control" type="text" id="updateInput1">
+                    </div>
+                    <div class="form-group">
+                        <label>Input 2</label>
+                        <input class="form-control" type="text" id="updateInput2">
+                    </div>
+                    <button class="btn btn-primary" @click="UpdateObject()" id="updateBtn">Update object</button>
+
+                    <div id="updateResponse" class="alert alert-info">updateResponse</div>
+
+                    <h3>Delete</h3>
+                    <div class="form-group">
+                        <label>ID</label>
+                        <input class="form-control" type="number" id="deleteInput">
+                    </div>
+                    <button class="btn btn-danger" @click="DeleteObject()" id="deleteBtn">Delete object</button>
+                    <div id="deleteResponse" class="alert alert-info">deleteResponse</div>
+
+                </div>
+                <div class="col-md-6">
+                    <h2>Collection</h2>
+                    <div v-if="books.length === 0">books[] is empty.</div>
+                    <div v-else class="scroller">
+                        <table class="table">
+                            <tr>
+                                <th>ID</th>
+                                <th>Titel</th>
+                                <th>Forfatter</th>
+                                <th>Publisher</th>
+                                <th>Pris</th>
+                            </tr>
+                            <tr v-for="book in books">
+                                <td>{{ book.id}}</td>
+                                <td>{{ book.title }}</td>
+                                <td>{{ book.author }}</td>
+                                <td>{{ book.publisher}}</td>
+                                <td>{{ book.price }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div> <!-- row end -->
+
+        </section>
+    </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="bundle.js"></script>
+
+</html>

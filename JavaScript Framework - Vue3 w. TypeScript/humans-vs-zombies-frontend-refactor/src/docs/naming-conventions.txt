@@ -1,0 +1,20 @@
+--- Fallback file naming ---
+file name: kebab-case;
+
+--- HTML & CSS ---
+id: camelCase;
+class: camelCase;
+
+--- CSS ---
+variables: kebab-case (put them in :root);
+
+
+--- TS/JS ---
+variables: camelCase;
+config consts: CAPS_CASE;
+interfaces: ISomeInterface (prefix with I)
+
+--- Vue ---
+component: PascalCase & if closly bound to others add prefix for the components its bound to 
+            (eg. ToDo, ToDoList, ToDoListItem, ToDoCreateButton);
+

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consuming Rest with TS and Vue</title>
+  <link rel="stylesheet" type="text/css" href="bundle.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="app" class="container">
+    <!-- Used as Vue's 'el' -->
+    <header>
+      <h1>Library (w. Webpack)</h1>
+      <h2>TypeScript/Vue Rest Practice</h2>
+    </header>
+
+    <button class="btn btn-warning" type="button" @click="clearBooks">Clear all</button>
+    <div class="row">
+      <section class="col-sm-6">
+        <h3>Get all books</h3>
+        <button class="btn btn-primary" type="button" @click="getAllBooks">Get books</button>
+        <div v-show="booksLoading" class="spinner-border" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div v-if="books.length === 0">Welcome to the dark abyss with no books.</div>
+        <div v-else class="scroller">
+          <table class="table">
+            <tr>
+              <th>ID</th>
+              <th>Titel</th>
+              <th>Forfatter</th>
+              <th>Publisher</th>
+              <th>Pris</th>
+            </tr>
+            <tr v-for="book in books">
+              <td>{{book.id}}</td>
+              <td>{{ book.title }}</td>
+              <td>{{ book.author }}</td>
+              <td>{{book.publisher}}</td>
+              <td>{{ book.price }}</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section class="col-sm-6">
+        <h3>Get one book</h3>
+        <div class="form-group">
+          <label class="formLabel">ID</label>
+          <input class="form-control" v-model.lazy="bookIdGet" type="number" placeholder="Enter id here...">
+        </div>
+        <button class="btn btn-primary" type="button" @click="getBookById(bookIdGet)">Get book by id</button>
+        <div v-if="oneBook">
+          <b>ID:</b> {{oneBook.id}}<br>
+          <b>Titel:</b> {{ oneBook.title }}<br>
+          <b>Forfatter:</b>{{ oneBook.author }}<br>
+          <b>Publisher:</b> {{oneBook.publisher}} <br>
+          <b>Pris:</b> {{ oneBook.price }}
+        </div>
+        <div v-else>
+          Could not find book.
+        </div>
+      </section>
+    </div> <!-- Row 1-->
+    <hr>
+    <div class="row">
+      <section class="col-sm-6">
+        <h3>Create book</h3>
+        <div class="form-group">
+          <label for="newTitleInput" class="formLabel">Titel</label>
+          <input class="form-control" v-model.lazy="addBook.title" type="text" placeholder="Titel...">
+        </div>
+        <label for="newAuthorInput" class="formLabel">Forfatter</label>
+        <input class="form-control" v-model.lazy="addBook.author" type="text" placeholder="Forfatter...">
+        <div class="form-group">
+          <label for="newPublisher" class="formLabel">Forlag/Publisher</label>
+          <input class="form-control" v-model.lazy="addBook.publisher" type="text" placeholder="Publisher...">
+        </div>
+        <div class="form-group">
+          <label for="newPriceInput" class="formLabel">Pris</label>
+          <input class="form-control" v-model.lazy="addBook.price" type="number" placeholder="Pris...">
+        </div>
+        <button class="btn btn-primary" type="button" @click="createBook">Create book</button>
+        <div class="alert alert-success" v-show="addMessage">{{ addMessage }}</div>
+      </section>
+      <section class="col-sm-6">
+        <h3>Update book</h3>
+        <div class="form-group">
+          <label for="updatedIdInput" class="formLabel">Id</label>
+          <input class="form-control" v-model.lazy="bookIdGet" type="text" placeholder="Id...">
+        </div>
+        <button class="btn btn-primary" type="button" @click="getBookById(bookIdGet)">Get book info</button>
+        <div class="form-group">
+          <label for="updatedTitleInput" class="formLabel">Titel</label>
+          <input class="form-control" v-model.lazy="updatedBook.title" type="text" placeholder="Titel...">
+        </div>
+        <label for="updatedAuthorInput" class="formLabel">Forfatter</label>
+        <input class="form-control" v-model.lazy="updatedBook.author" type="text" placeholder="Forfatter...">
+        <div class="form-group">
+          <label for="updatedPublisher" class="formLabel">Forlag/Publisher</label>
+          <input class="form-control" v-model.lazy="updatedBook.publisher" type="text" placeholder="Publisher...">
+        </div>
+        <div class="form-group">
+          <label for="updatedPriceInput" class="formLabel">Pris</label>
+          <input class="form-control" v-model.lazy="updatedBook.price" type="number" placeholder="Pris...">
+        </div>
+        <button class="btn btn-primary" type="button" @click="updateBook(updatedBook.id)">Update book</button>
+        <div class="alert alert-success" v-show="updateMessage">{{ updateMessage }}</div>
+      </section>
+    </div> <!-- Row 2 -->
+    <hr>
+    <div class="row">
+      <section class="col-sm-6">
+        <h3>Delete book</h3>
+        <div class="form-group">
+          <label class="formLabel">Id</label>
+          <input class="form-control" v-model.lazy="bookIdDelete" type="number" placeholder="id to delete">
+        </div>
+        <button class="btn btn-primary" type="button" @click="deleteBook(bookIdDelete)">Delete book</button>
+        <div class="alert alert-success" v-show="deleteMessage">{{ deleteMessage }}</div>
+      </section>
+      <section class="col-sm-6" v-if="errors.length != 0">
+        <div class="alert alert-danger">{{errors}}</div>
+      </section>
+    </div> <!-- Row 3-->
+    <footer>
+      This is a footer
+    </footer>
+  </div> <!-- #app and .container -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="bundle.js"></script>
+</body>
+
+</html>

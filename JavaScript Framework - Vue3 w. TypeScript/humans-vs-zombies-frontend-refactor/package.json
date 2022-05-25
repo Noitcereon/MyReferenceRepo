@@ -1,0 +1,35 @@
+{
+  "name": "dk-java-hvz",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite build && vite preview",
+    "postinstall": "npm run build",
+    "start": "node node-server.js"
+  },
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.13.10",
+    "dotenv-webpack": "^7.1.0",
+    "express": "^4.17.3",
+    "keycloak-js": "16.1.1",
+    "server-static": "^2.0.5",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.13",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.48.3",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vue-tsc": "^0.29.8"
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}

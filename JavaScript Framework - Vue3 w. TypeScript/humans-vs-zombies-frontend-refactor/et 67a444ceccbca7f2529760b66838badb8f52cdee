@@ -1,0 +1,48 @@
+[33mec12499[m[33m ([m[1;36mHEAD -> [m[1;32mtba-game-details-nav[m[33m)[m Revert "feat: add remaining child routes for game details"
+[33m67a444c[m feat: add remaining child routes for game details
+[33m18bb336[m feat: add routing to game details title fragment
+[33m9a77660[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m Merge branch 'tba-bite-code' into 'main'
+[33m0146a64[m[33m ([m[1;31morigin/tba-bite-code[m[33m, [m[1;32mtba-bite-code[m[33m)[m feat: add bite code functionality (no AP")
+[33m92845cc[m feat(store): import bitecode module
+[33m094f70b[m feat: add bite-code-module
+[33m52fef93[m[33m ([m[1;31morigin/tba-home-html[m[33m, [m[1;32mtba-home-html[m[33m)[m style(App): add nav bg + link style
+[33me0e9b9f[m chore(readme): fix headline + change installation section + IDE setup
+[33m676677d[m Merge branch 'tba-ci-cd' into 'main'
+[33m2291c98[m ci: deployment with ruby dpl attempt
+[33md317cbc[m[33m ([m[1;31morigin/tba-ci-cd[m[33m)[m chore: remove docker files
+[33md3c2c12[m Merge branch 'tba-tailwind' into 'main'
+[33m53da1ec[m[33m ([m[1;31morigin/tba-tailwind[m[33m)[m chore: add index.css and import it in main.ts
+[33mdca0d1b[m chore: add tailwind config
+[33md83e1de[m chore: add tailwind dependencies
+[33mb71f52d[m Merge branch 'Noitcereon-readme-patch' into 'main'
+[33mb1860cb[m chore(readme): add proper readme
+[33m5c9912e[m Merge branch 'tba-deployment-node-server' into 'main'
+[33m3155e86[m chore: move dev-dependencies into dependencies
+[33mf63b551[m Revert "chore: add start script in package.json"
+[33m1ede8c6[m chore: add start script in package.json
+[33mfb7acf6[m ci: Update .gitlab-ci.yml file
+[33m6312913[m[33m ([m[1;31morigin/tba-deployment-node-server[m[33m)[m chore: add node-server to serve files
+[33md57d99d[m[33m ([m[1;31morigin/tba-deployment-heroku[m[33m)[m chore(gitignore): add .env
+[33mfacb9a7[m chore: Application can run with Docker locally
+[33m805cd04[m chore: change npm run preview to build before serving
+[33m681571e[m Update .gitlab-ci.yml file
+[33md33298d[m ci: update pipeline
+[33m192cdff[m Merge branch 'tba-vuex-setup' into 'main'
+[33m176d73c[m CI: Add.gitlab-ci.yml file
+[33m64b429b[m[33m ([m[1;31morigin/tba-vuex-setup[m[33m)[m feat: add VueX module example + update naming convention & gitignore
+[33m11386ac[m Merge branch 'tba-skeleton-routing' into 'main'
+[33m80f03d1[m feat: add Vuex store to app
+[33md2badb5[m[33m ([m[1;31morigin/tba-skeleton-routing[m[33m)[m refactor: add comments about expected functionality
+[33m4b405cb[m fix: correct h1 to Chat instead of Map
+[33mdf19598[m chore: add more skeleton files
+[33m2942527[m feat: add route to admin view
+[33mf90422d[m refactor!: rename component fragments for consistency
+[33m2da89a3[m chore: create (some) skeleton files
+[33mf7ff2e6[m feat: add basic routing configuration
+[33m57822bb[m chore: add vuex dependency
+[33mbe5529d[m refactor!: rename MainLayout -> DefaultLayout
+[33m79e4e29[m feat: add Home view and basic MainLayout
+[33mea09294[m chore(naming-convention.txt):update naming conventions
+[33m66dbb72[m chore: add docs folder with naming-conventions.txt
+[33m8999693[m chore:add vue-router-4 dependency
+[33m7467b49[m chore: create base vue-ts project

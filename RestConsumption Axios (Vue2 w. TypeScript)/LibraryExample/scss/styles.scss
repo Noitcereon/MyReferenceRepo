@@ -1,0 +1,34 @@
+$fontColor: #0091aa;
+$colorHeading: #be4a14;
+#app  // div with id: content
+{
+    color: $fontColor;
+    background-color: blanchedalmond;
+}
+
+h2
+{
+    color: $colorHeading;
+}
+
+h1{
+    @extend h2;
+}
+.formLabel{
+    font-weight: bold;
+    display:block;
+    margin:0;
+}
+header{
+    text-align: center;
+}
+footer{
+    text-align: center;
+    margin:0p 20px 0px 0px;
+    background-color: beige;
+    box-sizing: border-box;
+}
+.scroller{
+    overflow:scroll;
+    overflow:auto;
+}
