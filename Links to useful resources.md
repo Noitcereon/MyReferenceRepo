@@ -13,6 +13,7 @@ Materials used to acquire new or forgotten knowledge.
 
 ### C#
 - [C# News Site (Collects news from various places about C#)](https://dotnetketchup.com/?hide=fsharp%2Cvbnet (C# / .NET news site))
+- [Datamatiker Exam Project (Idevent)](https://github.com/Ronnie1983/Idevent) (Project that uses C# REST API, Blazor (server), Dapper, SignalR and more)
 
 ### JavaScript
 - https://www.youtube.com/watch?v=QUz3k2O3ZJU (The Net Ninja - Complete React Tutorial (& Redux) #25, the React Router)
