@@ -7,12 +7,14 @@ Materials used to acquire new or forgotten knowledge.
 - https://microchipdeveloper.com/ (contains a lot of technical information, such as info about each layer on the 5-layer model)
 - https://devdocs.io/ (contains guides to a lot of different 3rd party packages & frameworks, such as Vue, WebPack and many more)
 - https://www.dofactory.com/net/state-design-pattern (lots of design patterns for C# explained in detail)
+- https://12factor.net/ (describes a methodology containing best practices for web apps ("as-a-service apps")
 
 ### Java
 - [Spring Data JPA (what it is, how to use it)](https://www.petrikainulainen.net/programming/spring-framework/spring-data-jpa-tutorial-introduction-to-query-methods/)
 
 ### C#
 - [C# News Site (Collects news from various places about C#)](https://dotnetketchup.com/?hide=fsharp%2Cvbnet (C# / .NET news site))
+- [Datamatiker Exam Project (Idevent)](https://github.com/Ronnie1983/Idevent) (Project that uses C# REST API, Blazor (server), Dapper, SignalR and more)
 
 ### JavaScript
 - https://www.youtube.com/watch?v=QUz3k2O3ZJU (The Net Ninja - Complete React Tutorial (& Redux) #25, the React Router)
