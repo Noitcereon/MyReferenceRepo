@@ -9,10 +9,14 @@ an image with that can be used to start a Java API.
 
 The `docker-compose.yml` is an alternative way to start containers. It can utilize a `Dockerfile` to build an image.
 The `docker-compose.yml` provided here, builds the Dockerfile present in the same folder as the docker-compose itself and 
-then starts 2 containers __in the same network__: one called practice_postgres_db (a Postgres Database) and one called
-renewing-java-api-knowledge (a Java API).
+then starts 2 containers __in the same network__: one called *practice_postgres_db* (a Postgres Database) and one called
+*renewing-java-api-knowledge* (a Java API).
 
 By using the `docker-compose.yml` it automatically puts the containers it makes in the same network. This allows for communication between them.
 
 This could also be done manually through the CLI commands. Something related to this documentation afaik: [see Docker documentation about network bridge](https://docs.docker.com/network/bridge/). 
+
+## Quick overview video
+
+[Learn Docker in 7 Easy Steps - Full Beginner's Tutorial](https://www.youtube.com/watch?v=gAkwW2tuIqE) by __Fireship__
 
