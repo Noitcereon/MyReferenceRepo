@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPServerUI", "TCPConsoleUI\TCPServerUI.csproj", "{99E5EF6F-9926-4698-8BF9-B25AA60599B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPLib", "TCPServerLib\TCPLib.csproj", "{31CD8798-2124-49E9-8907-748EC6F6C393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TCPClientUI", "TCPClientUI\TCPClientUI.csproj", "{B2711930-5BBC-40A6-A601-4A8501BD6E4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99E5EF6F-9926-4698-8BF9-B25AA60599B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99E5EF6F-9926-4698-8BF9-B25AA60599B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99E5EF6F-9926-4698-8BF9-B25AA60599B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99E5EF6F-9926-4698-8BF9-B25AA60599B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CD8798-2124-49E9-8907-748EC6F6C393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CD8798-2124-49E9-8907-748EC6F6C393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CD8798-2124-49E9-8907-748EC6F6C393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CD8798-2124-49E9-8907-748EC6F6C393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2711930-5BBC-40A6-A601-4A8501BD6E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2711930-5BBC-40A6-A601-4A8501BD6E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2711930-5BBC-40A6-A601-4A8501BD6E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2711930-5BBC-40A6-A601-4A8501BD6E4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {616C3607-0D50-44B5-B10E-FEDFF5C2CFE3}
+	EndGlobalSection
+EndGlobal
