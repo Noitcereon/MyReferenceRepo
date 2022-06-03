@@ -1,0 +1,36 @@
+image: node:latest # Specifices a base image all jobs will use (can use different registries, by adding registry path)
+stages: # Defines the different stages the CI CD pipeline will go through in order (top to bottom)
+  - build
+  - test
+  - deploy
+build-job: # title of a job
+  stage: build # which stage the job belongs to
+  cache: # Caches the node_modules
+      key:
+        files:
+          - package-lock.json
+        prefix: npm
+      paths:
+        - node_modules/
+  script: # Specifies which scripts to run for the build-job (in order)
+  - npm install
+  - npm run build
+  artifacts: # Specifies the files, variables, etc. which should be passed to jobs below this one ()
+    untracked: false # default is false (Specifices whether Git should start tracking any untracked files created during the CI CD process)
+    expire_in: 30 days # Specifies how long the artifacts are available (they can be downloaded from GitLab)
+    paths: # The paths to files or directories that should be passed on as artifacts
+      - dist # the dist folder in the root
+      - node_modules/ # the node_modules folder in root
+test-job: # A new job called test-job
+  stage: test # It belongs to test stage
+  script: 
+    - npm run test # It should run the npm run test command (note: this is only possible because node_modules is passed as an artifact from the build-job)
+pages: # Special job called pages. Used to deploy to GitLab pages 
+  stage: deploy
+  script:
+    - cp -a dist/. public/ # Copy all files from dist/ folder into public/
+  artifacts:
+    paths:
+      - public # Required for GitLab Pages
+  only: # Specifies which branches to run this job on (in this case, only main)
+    - main 
