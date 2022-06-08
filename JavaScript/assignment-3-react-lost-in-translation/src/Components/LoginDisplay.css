@@ -1,0 +1,6 @@
+.login-display{
+    margin-left:auto;
+    background-color:var(--purple);
+    padding:1rem;
+    border-radius: 20px;
+}

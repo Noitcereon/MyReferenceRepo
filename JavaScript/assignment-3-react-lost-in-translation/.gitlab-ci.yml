@@ -1,0 +1,24 @@
+stages:
+  - build
+  - deploy
+image: node:16
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+    - rm -r public
+    - mv ./build ./public
+    - cp public/index.html public/404.html
+  artifacts:
+    paths:
+      - public
+pages:
+  stage: deploy
+  script:
+    - ls
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
