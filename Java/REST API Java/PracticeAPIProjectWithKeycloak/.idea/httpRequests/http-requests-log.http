@@ -1,0 +1,10 @@
+POST http://localhost:8081/api/genres
+
+<> 2022-05-20T130159.200.json
+
+###
+
+POST http://localhost:${PORT:8081}/api/genres
+
+###
+
