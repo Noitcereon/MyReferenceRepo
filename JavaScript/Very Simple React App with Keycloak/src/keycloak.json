@@ -1,0 +1,8 @@
+{
+  "realm": "renewing-java-api-knowledge",
+  "auth-server-url": "http://localhost:8083/",
+  "ssl-required": "external",
+  "resource": "noitcereon-frontend-app",
+  "public-client": true,
+  "confidential-port": 0
+}

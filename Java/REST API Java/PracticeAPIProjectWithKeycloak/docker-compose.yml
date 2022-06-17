@@ -1,0 +1,46 @@
+version: '3.0'
+services:
+  web:
+    container_name: renewing-java-api-knowledge
+    build: .
+    environment:
+      DDL_AUTO: ${DDL_AUTO}
+      DATABASE_URL: jdbc:postgresql://postgresDB:5432/${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "8082:8081"
+  postgresDB:
+    container_name: practice_postgres_db
+    # Image source: https://hub.docker.com/_/postgres/
+    # The structure is:
+    # image: [image-name]:[tag-name]
+    image: postgres:14-alpine
+    environment:
+      # The environment variables are set in the .env file
+      # The env. variable names are keywords for the image used
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "4500:5432"
+    volumes:
+      - POSTGRES_DB:/var/lib/postgresql/data
+
+  # This runs a dev only keycloak instance using an H2 in-memory database.
+  # For proper use, it should use an external database such as Postgres.
+  # This external database ought to be configured with volumes as well for persistence.
+  keycloak:
+    container_name: practice_keycloak
+    # Image source: https://quay.io/repository/keycloak/keycloak?tab=tags
+    image: quay.io/keycloak/keycloak
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command:
+      # This starts keycloak in development mode
+      - start-dev
+    ports:
+      - "8083:8080"
+volumes:
+  POSTGRES_DB:
