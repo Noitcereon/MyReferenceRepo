@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "0adaca18-92d2-43d1-893e-eef4b032534e",
+		"name": "my-tunes-assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CustomerController",
+			"item": [
+				{
+					"name": "getAllCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer/1",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer/search?name=per",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "per"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getHighestSpendingCustomersDescending",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer/count/spendings",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"count",
+								"spendings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNumberOfCustomerPerCountry",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer/count/country",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"count",
+								"country"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomersMostPopularGenres",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer/12/popular/genre",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"12",
+								"popular",
+								"genre"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Søren\",\r\n    \"lastName\": \"Gonçalves\",\r\n    \"country\": \"Brazil\",\r\n    \"postalCode\": \"12227-000\",\r\n    \"phoneNo\": \"+55 (12) 3923-5555\",\r\n    \"email\": \"luisg@embraer.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer/",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Jørgen\",\r\n    \"lastName\": \"Gonçalves\",\r\n    \"country\": \"Brazil\",\r\n    \"postalCode\": \"12227-000\",\r\n    \"phoneNo\": \"+55 (12) 3923-5555\",\r\n    \"email\": \"luisg@embraer.com.br\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/customer/1",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MusicController",
+			"item": [
+				{
+					"name": "getRandomMusicInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/musicinfo/random",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"musicinfo",
+								"random"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMusicSearchInfo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://my-tunes-assignment.herokuapp.com/api/musicinfo/search?search=never",
+							"protocol": "http",
+							"host": [
+								"my-tunes-assignment",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"musicinfo",
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "never"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
