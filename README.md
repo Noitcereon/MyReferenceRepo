@@ -11,4 +11,4 @@ The projects in this repo are not guaranteed to be functional, as some code migh
 - https://github.com/Noitcereon/Setup (Setup for the tools I use)
 
 ## Maintainer
-@Noitcereon
+[Noitcereon](https://github.com/Noitcereon/)
