@@ -1,5 +1,5 @@
 # MyReferenceRepo
-This repository contains the code I use as reference when I forget how to do something.
+This repository contains the code and notes I use as reference when I forget how to do something.
 
 ## Usage
 This is only intended for personal usage by looking at my past code.
