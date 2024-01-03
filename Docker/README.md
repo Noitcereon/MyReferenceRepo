@@ -5,7 +5,7 @@ The files in here are taken from a Java API project.
 The `Dockerfile` is used to build an `image`, which in turn can be used to make a `container`
 
 A `container` is an instance of whatever the image builds. The `Dockerfile` in this folder builds
-an image with that can be used to start a Java API.
+an image which can be used to start a Java API.
 
 The `docker-compose.yml` is an alternative way to start containers. It can utilize a `Dockerfile` to build an image.
 The `docker-compose.yml` provided here, builds the Dockerfile present in the same folder as the docker-compose itself and 
