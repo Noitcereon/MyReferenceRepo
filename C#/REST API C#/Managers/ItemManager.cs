@@ -12,6 +12,8 @@ namespace PracticeRestService.Managers
 {
     public class ItemManager
     {
+        // Never write password in source code like below. This connectionString in its entirety should probably be fetched 
+        // from another source, e.g. a config file.
         private const string ConnectionString =
             @"Data Source=zealandserver.database.windows.net;Initial Catalog = replaceableDB;
             User ID = zealandserver; Password=iEIPpEfRh#;Connect Timeout = 30;
