@@ -1,6 +1,6 @@
 # Bash Scripting
 
-Bash Script is incorporated to automate command sequences which are repetitive in nature. Scripting is a way by which one can alleviate this necessity by automating these command sequences in order to make one’s life at the shell easier and more productive. In most organizations, Bash scripting is incorporated in some way or the other to automate stuff.
+Bash Script is incorporated to automate command sequences which are repetitive in nature. Scripting is a way by which one can alleviate this necessity by automating these command sequences in order to make one’s life at the shell easier and more productive. In most organizations, Bash scripting is incorporated in one way or another to automate processes.
 
 Some of the features of Bash scripts are −
 
