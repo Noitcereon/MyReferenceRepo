@@ -1,0 +1,11 @@
+target
+
+.idea
+node_modules
+/my-firstcup/src/main/webapp/assets/css/tailwindCompiled.css
+
+# PC specific scripts
+copy-to-autodeploy.sh
+remove-from-autodeploy.sh
+
+*.iml

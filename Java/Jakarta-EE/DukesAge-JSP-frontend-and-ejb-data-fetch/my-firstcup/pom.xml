@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>me.noitcereon</groupId>
+        <artifactId>java-ee8-firstcup-tutorial</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>my-firstcup</artifactId>
+    <packaging>war</packaging>
+    <name>${project.artifactId}</name>
+    <description>The web front-end for the First Cup Tutorial example.</description>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>me.noitcereon</groupId>
+            <artifactId>shared-dependencies</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId> <!-- JSTL = JavaServer Pages Tag Library -->
+            <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>${javaee.api.version}</version>
+            <scope>provided</scope> <!-- It will be provided by a Java EE compliant Application Server -->
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!--
+    I think it would be nice to build Tailwind CSS as part of the build.
+     Maybe it can be done via the 'exec-maven-plugin', which can "execute programs and Java programs in a separate process."
+    The command that needs to be executed is:
+    "npx tailwindcss -i ./my-firstcup/src/main/webapp/assets/css/tailwind.css -o ./my-firstcup/src/main/webapp/assets/css/tailwindCompiled.css"
+     -->
+</project>

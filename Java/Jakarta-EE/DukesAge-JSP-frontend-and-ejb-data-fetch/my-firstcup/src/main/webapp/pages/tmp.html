@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test html - quick and dirty html</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="../assets/css/tailwindCompiled.css"/>
+</head>
+<body class="bg-blue-100">
+<header class="grid grid-cols-3">
+    <div class=""></div>
+    <div class="grid text-blue-800 justify-center">
+        <h1>Greetings Page!</h1>
+    </div>
+    <div class=""></div>
+</header>
+<main class="grid mx-2 p-2 bg-orange-50">
+    <div>
+        <form method="post" id="my-dukes-age-form">
+            <div>
+                <label for="user-birthday">Enter Your Birthday: </label>
+                <input type="date" id="user-birthday" name="user-birthday" value="1998-01-01">
+            </div>
+            <button type="submit" id="my-dukes-age-form-submit" class="bg-blue-700 rounded border-gray-700 text-amber-50 p-1 m-0.5">Submit</button>
+        </form>
+        <button id="getDukesAgeBtn" type="submit" class="bg-blue-700 rounded border-gray-700 text-amber-50 p-1 m-0.5">Get Dukes Age</button>
+        <div>Dukes age is: <span id="dukes-age-result"></span></div>
+    </div>
+</main>
+<script>
+    const getDukesAgeBtn = document.getElementById("getDukesAgeBtn")
+    getDukesAgeBtn.addEventListener("click", async (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        try {
+            const result = await fetch("http://localhost:4444/my-dukes-age-1.0-SNAPSHOT/webapi/dukesAge")
+            const resultSpan = document.getElementById("dukes-age-result")
+            resultSpan.innerText = await result.text() + " years";
+        } catch (error) {
+            console.error(error)
+        } finally {
+            console.log("End of dukesAge call.")
+        }
+    });
+</script>
+</body>
+</html>

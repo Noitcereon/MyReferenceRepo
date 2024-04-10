@@ -1,0 +1,8 @@
+{
+  "name": "my-firstcup-tutorial",
+  "description": "A simple web application, made to practice Java EE (Servlets, EJB etc.) and my personal whims.",
+  "version": "1.0-SNAPSHOT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
