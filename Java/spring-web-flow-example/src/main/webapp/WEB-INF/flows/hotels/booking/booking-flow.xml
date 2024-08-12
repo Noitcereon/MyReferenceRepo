@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          https://www.springframework.org/schema/webflow/spring-webflow.xsd">
+
+    <var name="flowHandler" class="me.noitcereon.springwebflowexample.flows.hotels.booking.HotelBookingFlowHandler"/>
+
+    <on-start>
+        <evaluate expression="flowHandler.customInitMethod()"/>
+    </on-start>
+    <view-state id="first-page" view="/WEB-INF/flows/hotels/booking/booking-entrypoint.jsp">
+        <transition on="success" to="booking-success"/>
+        <transition on="cancel" to="booking-cancelled"/>
+    </view-state>
+    <end-state id="booking-success" view="/WEB-INF/flows/hotels/booking/booking-success.jsp"/>
+    <end-state id="booking-cancelled" view="/WEB-INF/flows/hotels/booking/booking-cancelled.jsp"/>
+</flow>
