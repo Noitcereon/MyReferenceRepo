@@ -25,6 +25,8 @@ I will split this document in 2 sections:
 
 ## Things I Need to Achieve What I Want
 
+> General advice on tutorial learning: Pick 1 tutorial, follow it, repeat with minimal reference, repeat but with changes
+
 1. Maintain knowledge of HTML, CSS and JavaScript
     - Keep my current knowledge through practice
     - Keep up to date with news of features and deprecations
