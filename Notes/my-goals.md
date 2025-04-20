@@ -26,16 +26,16 @@ I will split this document in 2 sections:
 ## Things I Need to Achieve What I Want
 
 1. Maintain knowledge of HTML, CSS and JavaScript
-  - Keep my current knowledge through practice
-  - Keep up to date with news of features and deprecations
-    - CSS tips: https://www.youtube.com/@KevinPowell
+    - Keep my current knowledge through practice
+    - Keep up to date with news of features and deprecations
+      - CSS tips: https://www.youtube.com/@KevinPowell
 2. Maintain knowledge of Java
-  - Keep my current knowledge through practice
-  - Keep up to date with news of features and deprecations
-    - https://dev.java/news/
+   - Keep my current knowledge through practice
+   - Keep up to date with news of features and deprecations
+     - https://dev.java/news/
 3. Maintain knowledge of general software development
- - https://www.youtube.com/@IAmTimCorey
- - [Daily Dev](https://daily.dev/)
+   - https://www.youtube.com/@IAmTimCorey
+   - [Daily Dev](https://daily.dev/)
 4. Learn how to send SMS via JavaScript or Java applications.
 5. Learn how to send E-mail via Java or JavaScript applications.
 6. Practice how to use Keycloak.
