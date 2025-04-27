@@ -56,6 +56,7 @@ The below lists are tools used for various parts of project-making.
 - https://www.youtube.com/watch?v=9BGWtTahGnw Yaml Crash Course (JSON alternative)
 - charts.js (line charts, pie charts, bar charts…)
 - Keycloak (Identity Provider you can use with OAuth2)
+- [https://mailtrap.io](MailTrap) - An Email Delivery Platform for sending and testing E-mails.
 
 ### Testing
 
