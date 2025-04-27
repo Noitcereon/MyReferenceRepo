@@ -15,4 +15,4 @@ Some of the common uses of Bash scripts are −
 - Automating the deployment of applications from one environment to another.
 - Installing programs on various machines at once.
     
-Bash scripts are stored in simple text files containing lines with commands that get executed in sequence, one after the other. These files have the `.sh` extension.
+Bash scripts are stored in simple text files containing lines with commands that get executed in sequence, one after the other. These files typically have the `.sh` extension (although not required and some argue that there should be no extension at all, since it can be confused with Sh Shell)
