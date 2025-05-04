@@ -11,7 +11,7 @@ I will split this document in 2 sections:
 
 - Make static info websites that "looks professional" within 7 days.
    - Example: Designing and coding a website with a landing page along with 2-5 pages, some of which can contain carousels of images and modal popups to read more info.
-- Implement an authentication & authorization mechanism in a webapp within 3 days
+- Implement a secure authentication & authorization mechanism in a webapp within 3 days
   - Example: A simple webapp with an admin and user role that uses [Keycloak](https://github.com/keycloak/keycloak) for login.
 - Make a simple REST api that uses a database within 2 days.
   - Example: Setup a postgres database with a 1-3 tables, which has been setup with a config injected connectionstring in a Java REST api.
